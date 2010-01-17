@@ -192,11 +192,11 @@ Move Board::RandomLegalMove (const Player& player) const {
 	*/
 
 	if (player == Player::First()){
-		if (_red_sample.get_all_sum() > 1.0) 
+		if (_red_sample.get_all_sum() > 0.000001) 
 			return Move(player, Location(_red_sample.Random()));
 	}
 	else{
-		if (_blue_sample.get_all_sum() > 1.0) 
+		if (_blue_sample.get_all_sum() > 0.000001) 
 			return Move(player, Location(_blue_sample.Random()));
 	}
 

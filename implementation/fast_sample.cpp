@@ -151,7 +151,10 @@ inline uint FastSample::Random() const {
 	double r = ((double) Rand::next_rand() / ((uint(1) << 31) - 1 - 1)) * all_sum;
 	uint i, j;
 
+	/* a kind request: dubug to cerr! */
+	/*
 	std::cout << r << std::endl;
+	*/
 
 	for (i = 1; i <= kBoardSize; ++i)
 		if (r < _rows[i])
